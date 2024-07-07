@@ -1,0 +1,103 @@
+* {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+}
+
+body {
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    height         : 100vh;
+    background     : url("https://images.pexels.com/photos/7573493/pexels-photo-7573493.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.container {
+    height          : 90vh;
+    max-width       : 500px;
+    min-width       : 344px;
+    background      : rgba(0, 0, 0, 0.315);
+    border-radius   : 10px;
+    box-shadow      : 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter : blur(10px);
+    border          : 1px solid rgba(0, 0, 0, 0.18);
+    display         : flex;
+    flex-direction  : column;
+    padding         : 10px;
+}
+
+.chat-display{
+    flex-grow: 1;
+    overflow: scroll;
+    overflow-y: auto;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.chat-display::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari, and Opera */
+}
+
+.message{
+    max-width: 70%;
+    width: fit-content;
+    color: white;
+    word-wrap: break-word;
+    box-sizing: border-box;
+}
+
+
+.message.own {
+    align-self: flex-end;
+    max-width: 70%;
+}
+
+.texts p {
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.message > .texts p {
+    background-color: rgba(17, 25, 40, 0.5);
+}
+
+.message.own > .texts p {
+    background-color: #5183fe;
+}
+
+.chat-controller{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: blue; */
+    align-items: center;
+    border-top: 1px solid #ffffff50;
+    height: 50px;
+    gap: 6px;
+}
+
+.chat-controller button{
+    font-size: larger;
+    background-color: #497dff;
+    color: white;
+    padding: 6px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.chat-controller input{
+    font-size: larger;
+    flex-grow: 1;
+    background-color: rgba(255, 255, 255, 0.233);
+    border: none;
+    outline: none;
+    color: white;
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 16px;
+}
